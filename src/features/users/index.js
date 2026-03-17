@@ -1,0 +1,1 @@
+// exponer todas las rutas (encapsulamiento)

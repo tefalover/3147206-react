@@ -8,22 +8,35 @@ export default function Input({
         //  Contenedor del input que se exporta con label, cuerpo y feedback massage 
         <div className="w-[320px]">
             {/* Label */}
+
+        {label && (
             <label 
                 className="
-                    block,
-                    text-caption
+                    block
+                    text-[8px]
                     mb-1
-                    text-text-primary
-                "> 
-                
+                    place-self-start
+                "
+            >  
                 {label}
             </label>
+        )}
+
+            
+
+            {/* =========================================================== */}
 
             {/* Contenedor del input */}
-            <div>
+            <div
+                className="
+                    relative
+                    h-12
+                    flex
+                    items-center 
+                ">
+
 
                 {/* Área interactiva invicible de un input 48px */}
-
                 <div 
                     className="
                         absolute
@@ -37,13 +50,12 @@ export default function Input({
                         //`focus() `  cambia el foco del usuario ese elemento)
                         e.currentTarget.nextSibling.focus();
                     }}
-                    >
-
-                </div>
+                    />
 
                 {/* Área visual del input */}
 
                 <input
+                    type={type}
                     className="
                         relative
                         w-full
@@ -53,7 +65,6 @@ export default function Input({
                         border-border
                         px-4
                         text-bese
-
                         focus:outline-none
                         focus:ring-2
                         focus:ring-focus-ring
@@ -61,8 +72,6 @@ export default function Input({
                         "
                         {...props}
                         >
-                    
-
                 </input>
 
 

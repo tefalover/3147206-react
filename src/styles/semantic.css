@@ -14,11 +14,11 @@
 
     --semantic-background: var(--white);/* Fondo de toda la aplicacion*/
 
-    --semantic-surface: var(--gray-200);/*Fondo de mpdales, cards containers*/
+    --semantic-surface: var(--gray-900);/*Fondo de mpdales, cards containers*/
 
-    --semantic-background-muted: var(--primary-350);/*Zona secundarias, conmenos importancia*/
+    --semantic-background-muted: var(--primary-400);/*Zona secundarias, conmenos importancia*/
 
-    --semantic-background-inverse: var(--primary-350);
+    --semantic-background-inverse: var(--black);
 
     /* ====TEXT==== */
 

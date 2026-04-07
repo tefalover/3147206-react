@@ -1,6 +1,6 @@
 import {Input, Button} from "@/shared"
 
-export default function UserRegisterForm(){
+export default function UserRegisterForm(){ 
     
         //  Handle
         const handleNameChange = (e) =>{
@@ -87,9 +87,6 @@ export default function UserRegisterForm(){
                         
                     </div>
                 </div>
-                
-                
-            
 
             </form>
             

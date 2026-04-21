@@ -28,8 +28,8 @@
     --semantic-text-inverse: var(--gray-500);/*Texto invertido*/
 
     /* ==== BORDER ==== */
-
-    --semantic-border: var(--gray-400);/* Border principal de todooa lkos componentes*/
+    /* Para que al pasar mi hover estubera de el color verde y no gray */
+    --semantic-border: var(--primary-900);/* Border principal de todooa lkos componentes*/
     --semantic-border-strong: var(--gray-700);/* Bordea más fuertes*/
 
     /* ==== FOCUS ==== */

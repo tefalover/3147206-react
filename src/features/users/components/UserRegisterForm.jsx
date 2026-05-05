@@ -1,9 +1,12 @@
-import { Input, Button,  Select, Checkbox } from "@/shared"
+import { Input, Button, Select, Checkbox, IconButton, Dropdown, DropdownContent, DropdownItem, DropdownTrigger } from "@/shared"
 import { getDocumentTypes } from "@/features/users/services/selectService";
 import { useEffect, useState } from "react";
 import { userShema } from "../schemas/userSchema";
+import { Link, useNavigate } from "react-router-dom";
+import { SquareArrowRightEnter, Menu } from "lucide-react";
 
 export default function UserRegisterForm(){
+    const navigate = useNavigate();
     //useState para saber cuando cambia de estado algo, su valor por ejemplo
     const [ documentTypes, setDocumentTypes] =useState([]);
     const [ formData, setFormData] = useState({
@@ -14,10 +17,11 @@ export default function UserRegisterForm(){
         userDocumentNumber:"",
         userPassword:"",
 
-        // Flags booleanos
-        isStaff: false,
-        isActive: true,
-        isSuperUser: false,
+        //(Flags booleanos)
+        isStaff: false, //es administrador?
+        isActive: true, //está activo?
+        isSuperUser: false, //es un superAdmin?
+
     });
     const [errors, setErrors ] = useState({});
 
@@ -39,7 +43,7 @@ export default function UserRegisterForm(){
         ...prev,
 
         //Se actualiza unicamente lo que cambió
-        [name]: type === "checkbox" ? checked : value,
+        [name]: type === "checkbox" ? checked :  value,
     }));
    };
     // ==================================================
@@ -82,14 +86,14 @@ export default function UserRegisterForm(){
 
     return(
         <div>
-            <h1 className="text-text-primary text-2xl mb-6">
+            <h1 className="text-text-primary text-2xl mb-6 text-center pt-12">
                 Registro de usuario
             </h1>
             <form className="grid grid-cols-1 items-center gap-6 "
             onSubmit={handleSubmit}
             >
                 {/* Inputs */}
-                <div className="grid grid-cols-2 gap-6 my-0 mx-auto">
+                <div className="grid grid-cols-2 gap-6 my-0 mx-auto border p-6 rounded-[6px]">
                     <Input
                         label="Nombre"
                         name="userName"
@@ -142,34 +146,36 @@ export default function UserRegisterForm(){
                         onChange={handleChange}
                         error={errors.userPassword}
                     />
-
-                    <Checkbox 
+           
+                    <Checkbox
                         id="isStaff"
                         name="isStaff"
                         label="Es staff"
                         checked={formData.isStaff}
                         onChange={handleChange}
                     />
-                    <Checkbox 
+
+                    <Checkbox
                         id="isActive"
                         name="isActive"
-                        label="Es active"
+                        label="Está activo?"
                         checked={formData.isActive}
                         onChange={handleChange}
                     />
-                    <Checkbox 
+                    <Checkbox
                         id="isSuperUser"
                         name="isSuperUser"
-                        label="Es superUser"
+                        label="Es un super administrador?"
                         checked={formData.isSuperUser}
                         onChange={handleChange}
                     />
-
                     {/* Acciones */}
                     <div className="flex items-end justify-end gap-12">
                         <Button
                             variant="secondary"
                             size="sm"
+                            // el navigate -1 lleva a un layout anterior
+                            onClick={() => navigate (-1)}
                         >
                             Cancelar
                         </Button>
@@ -181,8 +187,15 @@ export default function UserRegisterForm(){
                             Guardar
                         </Button>
 
-
-
+                    {/* Icon button */}
+                    {/* el link debe de ser el mismo del de rutas */}
+                        <Link to="/dashboard">
+                        <IconButton 
+                            variant ="ghost"
+                        >
+                            <SquareArrowRightEnter />
+                        </IconButton>
+                    </Link>
                     </div>
                 </div>
                 

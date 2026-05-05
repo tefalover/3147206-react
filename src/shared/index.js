@@ -5,6 +5,8 @@ export { default as DeleteEffect } from "./components/DeleteEffect.jsx";
 export { default as DeleteCounter2 } from "./components/DeleteCounter2.jsx";
 export { default as Select } from "./components/Select.jsx";
 export { default as Checkbox } from "./components/Checkbox.jsx";
+export { default as Card } from "./components/Card.jsx";
+export { default as StatusSwitch } from "./components/StatusSwitch.jsx";
 export { IconButton } from "./components/IconButton.jsx";
 export { Dropdown, DropdownContent, DropdownItem, DropdownTrigger } from "./components/Dropdown.jsx";
 // export { default as CallToActionLayout } from "./layouts/CallToActionLayout.jsx";

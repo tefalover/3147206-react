@@ -5,6 +5,7 @@ import { CloudBackup } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { IconButton, Navbar } from "@/shared"
 import { LoginForm } from "@/features/auth";
+import {HomePage} from "@/features/home"
 
 export default function DashboardLayout() {
     const navigate = useNavigate();
@@ -25,7 +26,7 @@ export default function DashboardLayout() {
             <Navbar />
                 {/* Contenido dinamico de las paginas */}
             <main>
- 
+                <HomePage />
                 <Outlet />
 
             </main>

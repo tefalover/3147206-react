@@ -19,8 +19,6 @@ export default function Navbar(){
     }
  
     return(
-
-
         <nav className="w-full bg-transparent border-b-2">
             <div className="mx-auto max-w-7xl px-4">
                 <div className="flex h-16 items-center justify-between">
@@ -36,7 +34,6 @@ export default function Navbar(){
                         onChange={handleStatusChange}
                         size="md"
                     />
-
                     {/* Links de navegacion */}
                     <ul className="hidden md:flex items-center gap-6">
                         <li>

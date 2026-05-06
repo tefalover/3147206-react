@@ -198,8 +198,33 @@ export default function UserRegisterForm(){
                     </Link>
                     {/* <a href="/DashboardLayout">
                             <IconButton>
+                                <SquareArrowRightEnter />
                             </IconButton>
-                    </a> */}
+                    </a>  */}
+                    {/* =============== Dropdown ============= */}
+                    {/* <div className="p-10">
+                        <Dropdown>
+                            <DropdownTrigger>
+                                <IconButton arialLabel="Menu de usuario">
+                                    <Menu />
+                                </IconButton>
+                            </DropdownTrigger>
+
+                            <DropdownContent>
+                                <DropdownItem>
+                                    <Link to="/auth" className="block w-full">
+                                    Autenticación
+                                    </Link>
+                                </DropdownItem>
+                                <DropdownItem>
+                                    <Link to="/dashboard" className="block w-full">
+                                    Panel de control
+                                    </Link>
+                                </DropdownItem>
+                            </DropdownContent>
+                        </Dropdown>
+
+                    </div> */}
                     </div>
                 </div>
                 

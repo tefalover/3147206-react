@@ -1,4 +1,4 @@
-import { Input, Button, Select, Checkbox, IconButton, Dropdown, DropdownContent, DropdownItem, DropdownTrigger } from "@/shared"
+import { Input, Button, Select, Checkbox, IconButton, Dropdown, DropdownContent, DropdownItem, DropdownTrigger, FileInput } from "@/shared"
 import { getDocumentTypes } from "@/features/users/services/selectService";
 import { useEffect, useState } from "react";
 import { userShema } from "../schemas/userSchema";
@@ -16,6 +16,7 @@ export default function UserRegisterForm(){
         userDocumentType:"",
         userDocumentNumber:"",
         userPassword:"",
+        userImage: [],
 
         //(Flags booleanos)
         isStaff: false, //es administrador?
@@ -169,6 +170,24 @@ export default function UserRegisterForm(){
                         checked={formData.isSuperUser}
                         onChange={handleChange}
                     />
+
+                    {/* Contendor del input */}
+                    {/* <div>
+                        <h4>Maximo se pueden subir 12 archivos</h4>
+                    </div> */}
+
+                    <FileInput
+                        value={formData.userImage}
+                        onChange={(files) =>
+                            setFormData((prev) => ({...prev, userImage: files}))
+                        }
+                        multiple={true}
+                    />
+                    {errors.userImage && (
+                        <span className="text-red-500 text-sm">{errors.userImage}</span>
+                    )}
+                   
+
                     {/* Acciones */}
                     <div className="flex items-end justify-end gap-12">
                         <Button

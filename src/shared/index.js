@@ -1,4 +1,7 @@
+// Schemas comporpatidos
+export { fileSchema } from "./schemas/fileSchemas.js"
 export { default as Input } from "./components/Input.jsx";
+export { default as FileInput } from "./components/FileInput.jsx";
 export { default as Button } from "./components/Button.jsx";
 export { default as DeleteCounter } from "./components/DeleteCounter.jsx";
 export { default as DeleteEffect } from "./components/DeleteEffect.jsx";
@@ -14,3 +17,4 @@ export { default as AuthLayout } from "./layouts/AuthLayout.jsx";
 export { default as Navbar } from "./layouts/Navbar.jsx";
 export { default as DashboardLayout } from "./layouts/DashboardLayout.jsx";
 //Exporta layout y components
+

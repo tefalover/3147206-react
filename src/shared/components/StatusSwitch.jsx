@@ -10,6 +10,7 @@ export default function StatusSwitch({
     onChange,          // Callback que se ejecuta cuendi cambia el estado
     disabled = false,  //Permite deshabilitar lla interacción
     size = "md",      //Tmaño del switch (sm, md, lg)
+    className
 }){
     // Estado interno del componete
     //  Se inicia con el valor recibido desde la prop "checked"
@@ -63,7 +64,7 @@ export default function StatusSwitch({
                 className={`
 
                     // Posición base del switch 
-                    relative inline-flex items-center
+                    relative items-center
 
                     // forma redondea el contenedpr 
                     rounded-full transition-colors
@@ -76,6 +77,8 @@ export default function StatusSwitch({
 
                     // Estilo cuando está deshabilitado
                     ${disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}
+
+                    ${className}
                     
                 `}
             >

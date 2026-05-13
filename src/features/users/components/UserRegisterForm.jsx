@@ -91,10 +91,10 @@ export default function UserRegisterForm(){
                 Registro de usuario
             </h1>
             <form className="grid grid-cols-1 items-center gap-6 "
-            onSubmit={handleSubmit}
+                onSubmit={handleSubmit}
             >
                 {/* Inputs */}
-                <div className="grid grid-cols-2 gap-6 my-0 mx-auto border p-6 rounded-[6px]">
+                <div className="grid grid-cols sm:grid-cols-2 gap-6 my-0 mx-auto border p-6 rounded-[6px]">
                     <Input
                         label="Nombre"
                         name="userName"

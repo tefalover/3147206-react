@@ -57,8 +57,18 @@
     --font-body: var( --semantic-font-weigt-body);
     --font-label: var(--semantic-font-weigt-label);
 
-    
-
-    
 }
+
+    /* ====== CONTROL DE PSEUDO ELEMENTOS NATIVOS DEL NAVEGADOR  ====*/
+    
+    @layer base {
+      input[type="search"]::-webkit-search-decoration,
+      input[type="search"]::-webkit-search-cancel-button,
+      input[type="search"]::-webkit-search-result-button,
+      input[type="search"]::-webkit-search-result-decoration{
+        display: none;
+      }
+    }
+ 
+
 

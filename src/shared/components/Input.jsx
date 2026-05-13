@@ -1,5 +1,4 @@
 // Componente que se va a exportar
-
 export default function Input({
     label,
     type = "Text",
@@ -10,7 +9,7 @@ export default function Input({
     //Cuerpo de la función -> Dentro de una funcion solo se puede devolver un div
     return (
         // Contenedor del input que se exporta con label, cuerpo y feedback massage 
-        <div className="w-[320px]">
+        <div className="w-full">
             {/* LABEL. JWT evalua si tal es 1, si si lo hace  */}
 
             {label &&(

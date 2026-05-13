@@ -26,7 +26,7 @@ export default function DashboardLayout() {
             <Navbar />
                 {/* Contenido dinamico de las paginas */}
             <main>
-                <HomePage />
+                
                 <Outlet />
 
             </main>

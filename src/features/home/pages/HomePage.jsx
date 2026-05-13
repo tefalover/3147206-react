@@ -2,7 +2,7 @@ import { Card } from "@/shared"
 import { products } from "../../../../data/products/products"
 
 export default function HomePage(){
-    
+    // 
     return(
         <div className="mx-auto mt-4 max-w-7xl">
             {/* Hero */}

@@ -10,11 +10,13 @@ export { default as Select } from "./components/Select.jsx";
 export { default as Checkbox } from "./components/Checkbox.jsx";
 export { default as Card } from "./components/Card.jsx";
 export { default as StatusSwitch } from "./components/StatusSwitch.jsx";
+export { default as SearchField} from "./components/SearchField.jsx";
 export { IconButton } from "./components/IconButton.jsx";
 export { Dropdown, DropdownContent, DropdownItem, DropdownTrigger } from "./components/Dropdown.jsx";
 // export { default as CallToActionLayout } from "./layouts/CallToActionLayout.jsx";
 export { default as AuthLayout } from "./layouts/AuthLayout.jsx";
 export { default as Navbar } from "./layouts/Navbar.jsx";
+export { default as DataTable } from "./components/DataTable.jsx";
 export { default as DashboardLayout } from "./layouts/DashboardLayout.jsx";
 //Exporta layout y components
 

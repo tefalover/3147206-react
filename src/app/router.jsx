@@ -3,6 +3,10 @@ import { createBrowserRouter, Navigate } from "react-router-dom";
 import { AuthLayout, DashboardLayout }  from "@/shared/";
 import { CreateUserPage } from "@/features/users";
 import { LoginForm } from "@/features/auth";
+import { ListUserPage } from "@/features/users";
+import {HomePage} from "@/features/home";
+
+
 
 const router = createBrowserRouter([
     {   
@@ -20,10 +24,11 @@ const router = createBrowserRouter([
         element: <DashboardLayout />,
         // Nested Routes
         children: [
-            {index: true, element: <CreateUserPage />},
+            {index: true, element: <h1></h1>},
             {path: "/dashboard/auth", element: <LoginForm  />},
-            {path: "usuarios",element: <h1>Usuarios</h1>},
-            {path: "productos",element: <h1>Productos</h1>}
+            {path: "/dashboard/userList", element: <ListUserPage  />},
+            {path: "/dashboard/home",element: <HomePage/>},
+            {path: "/dashboard/create-user",element: <CreateUserPage/>}
         ],
     }
 ]);

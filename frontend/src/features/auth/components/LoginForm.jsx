@@ -1,6 +1,6 @@
 import { Input, Button, Select, Checkbox, IconButton, Dropdown, DropdownContent, DropdownItem, DropdownTrigger } from "@/shared"
 import { useState } from "react";
-import { loginShema } from "../schemas/loginSchema";
+import { loginSchema } from "../schemas/loginSchema";
 import { Link, useNavigate } from "react-router-dom";
 import { SquareArrowRightEnter, Menu } from "lucide-react";
 
@@ -46,7 +46,7 @@ export default function LoginForm() {
 
         //Se valida el objeto formData usando el esquema definido con Zod
         // safeParse devuelve un objeto indicando si la validacion fue exitosa o no
-        const result = loginShema.safeParse(formData);
+        const result = loginSchema.safeParse(formData);
 
         //Si la validacion falla
         if (!result.success) {

@@ -2,7 +2,7 @@
 import { z } from "zod";
 import { fileSchema } from "@/shared/schemas/fileSchemas.js";
 
-export const userShema = z.object({
+export const userSchema = z.object({
     userName: z
         .string()
         .min(3, "El nombre debe de tener mínimo 3 caracteres")
@@ -32,6 +32,10 @@ export const userShema = z.object({
         .regex(/[a-z]/, "Debe contener al menos una minúscula")
         .regex(/[0-9]/, "Debe contener al menos un número")
         .regex(/[^A-Za-z0-9]/, "Debe contener al menos un caractér especial"),
+    
+    isStaff: z.boolean(),
+    isActive: z.boolean(),
+    isSuperUser: z.boolean(),
     
     userImage: fileSchema.shape.files.optional()
     

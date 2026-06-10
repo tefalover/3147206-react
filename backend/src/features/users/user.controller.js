@@ -1,7 +1,7 @@
 // Importamos el servicio de usuarios.
 // El controller NO implementa lógica de negocio,
 // solo delega la operación al service correspondiente.
-import { userService } from "./user.service.js";
+import { userService } from "./user.services.js";
 
 
 // Exportamos un objeto controlador.

@@ -10,7 +10,7 @@ export const authRepository = {
             SELECT id, user_email, password, is_active
             FROM users
             WHERE user_email = $1
-            LIMIT 1;
+            LIMIT 1
         `;
 
         const result = await pool.query(query, [userEmail]);

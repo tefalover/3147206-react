@@ -6,8 +6,9 @@ import jwt from "jsonwebtoken";
 import { authRepository } from "./auth.repository.js";
 
 export const authService = {
-    async login({ email, password }) {
-        const user = await authRepository.findByEmail(email);
+    async login({ userEmail, userPassword }) {
+          console.log("EMAIL RECIBIDO:", userEmail);
+        const user = await authRepository.findByEmail(userEmail);
 
         console.log("USER ENCONTRADO: ", user);
 
@@ -15,7 +16,7 @@ export const authService = {
             throw new Error("Credenciales invalidas");
         }
 
-        const isMatch = await bcrypt.compare(password, user.password);
+        const isMatch = await bcrypt.compare(userPassword, user.password);
         // const isMatch = password === user.password;
 
         if (!isMatch) {

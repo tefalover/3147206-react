@@ -1,6 +1,6 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 //calltoaction invita a la persona no registrada a hacer algo
-import { AuthLayout, DashboardLayout }  from "@/shared/";
+import { AuthLayout, DashboardLayout,  ProtectedRoute}  from "@/shared/";
 import { CreateUserPage } from "@/features/users";
 import { LoginForm } from "@/features/auth";
 import { ListUserPage } from "@/features/users";
@@ -12,7 +12,7 @@ const router = createBrowserRouter([
     {   
         path: "/",
         //Por defecto me lleva al auth
-        element: <Navigate to="/dashboard" replace/>,
+        element: <Navigate to="/auth" replace/>,
     },
     {   
         path: "/auth",
@@ -21,7 +21,12 @@ const router = createBrowserRouter([
     },
     {
         path: "/dashboard",
-        element: <DashboardLayout />,
+        element: (
+            <ProtectedRoute>
+                <DashboardLayout />
+            </ProtectedRoute>
+        ),
+
         // Nested Routes
         children: [
             {index: true, element: <h1></h1>},

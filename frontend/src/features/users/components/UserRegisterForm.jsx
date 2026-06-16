@@ -1,9 +1,8 @@
-import { Input, Button, Select, Checkbox, IconButton, Dropdown, DropdownContent, DropdownItem, DropdownTrigger, FileInput } from "@/shared"
+import { Input, Button, Select, Checkbox, IconButton, FileInput } from "@/shared"
 import { getDocumentTypes } from "@/features/users/services/selectService";
 import { useEffect, useState } from "react";
 import { userSchema } from "../schemas/userSchema";
-import { Link, useNavigate } from "react-router-dom";
-import { SquareArrowRightEnter, Menu } from "lucide-react";
+import { useNavigate } from "react-router-dom"; 
 import { createUser } from "../services/userService"
 
 export default function UserRegisterForm(){
@@ -254,13 +253,7 @@ export default function UserRegisterForm(){
 
                     {/* Icon button */}
                     {/* el link debe de ser el mismo del de rutas */}
-                        <Link to="/dashboard">
-                        <IconButton 
-                            variant ="ghost"
-                        >
-                            <SquareArrowRightEnter />
-                        </IconButton>
-                    </Link>
+
                     {/* <a href="/DashboardLayout">
                             <IconButton>
                                 <SquareArrowRightEnter />

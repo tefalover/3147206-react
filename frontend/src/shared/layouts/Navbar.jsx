@@ -1,5 +1,7 @@
 import { Search, User } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { logout } from "@/features/auth/services/logoutService"
 import {
     IconButton,
     StatusSwitch,
@@ -14,6 +16,13 @@ import { useState } from "react";
 
 
 export default function Navbar() {
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        logout();
+        navigate("/auth");
+        
+    };
 
     // Componente de búsqueda
     const [search, setSearch] = useState("");
@@ -118,10 +127,10 @@ export default function Navbar() {
                                 </DropdownTrigger>
 
                                 <DropdownContent className="right-0 w-48">
-                                    <DropdownItem>
-                                        <Link to="/dashboard/auth" className="block w-full">
-                                            Cerrar sesión
-                                        </Link>
+                                    <DropdownItem onClick={handle
+                                        
+                                        |Logout}>
+                                        Cerrar sesión
                                     </DropdownItem>
                                     <DropdownItem>
                                         <Link to="/dashboard" className="block w-full">

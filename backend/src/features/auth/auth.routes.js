@@ -1,7 +1,7 @@
 // bankend/scr/features/auth/auth.routes.js
 // Rutas de autenticacion
 
-import {Router} from "express";
+import { Router } from "express";
 import { authController } from "./auth.controller.js";
 
 const router = Router();

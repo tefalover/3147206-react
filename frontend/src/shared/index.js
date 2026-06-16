@@ -19,4 +19,6 @@ export { default as Navbar } from "./layouts/Navbar.jsx";
 export { default as DataTable } from "./components/DataTable.jsx";
 export { default as DashboardLayout } from "./layouts/DashboardLayout.jsx";
 //Exporta layout y components
+// Implementacion de ruta
+export { default as ProtectedRoute } from "./auth/ProtectedRoute.jsx";
 

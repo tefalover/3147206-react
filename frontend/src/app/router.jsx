@@ -5,6 +5,7 @@ import { CreateUserPage } from "@/features/users";
 import { LoginForm } from "@/features/auth";
 import { ListUserPage } from "@/features/users";
 import {HomePage} from "@/features/home";
+import { AccessPage } from "@/features/access";
 
 
 
@@ -33,6 +34,7 @@ const router = createBrowserRouter([
             {path: "/dashboard/auth", element: <LoginForm  />},
             {path: "/dashboard/userList", element: <ListUserPage  />},
             {path: "/dashboard/home",element: <HomePage/>},
+            {path: "/dashboard/access",element: <AccessPage/>},
             {path: "/dashboard/create-user",element: <CreateUserPage/>}
         ],
     }

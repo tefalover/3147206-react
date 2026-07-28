@@ -127,9 +127,7 @@ export default function Navbar() {
                                 </DropdownTrigger>
 
                                 <DropdownContent className="right-0 w-48">
-                                    <DropdownItem onClick={handle
-                                        
-                                        |Logout}>
+                                    <DropdownItem onClick={handleLogout}>
                                         Cerrar sesión
                                     </DropdownItem>
                                     <DropdownItem>
@@ -142,6 +140,12 @@ export default function Navbar() {
                                             Gestión usuarios
                                         </Link>
                                     </DropdownItem>
+                                    <DropdownItem>
+                                        <Link to="/dashboard/access" className="block w-full">
+                                            Admin
+                                        </Link>
+                                    </DropdownItem>
+
 
                                     <DropdownItem
                                         onClick={() => {
